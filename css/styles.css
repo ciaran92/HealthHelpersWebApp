@@ -1,0 +1,1045 @@
+body{
+    margin: 0 10%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-size: 38px;
+}
+
+h2{
+    font-size: 23px;
+}
+
+h1, h2{
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.inner{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.innerDistance{
+    top: 55%;
+}
+
+.inner table{
+    text-align: left;
+    margin: 0 auto
+}
+
+table{
+    width: 70%;
+}
+
+td{
+    height: 40px;
+    width: 50%;
+    padding: 7.5px 0;
+}
+
+label{
+    margin-right: 50px;
+}
+
+input[type="radio"]{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: #999;
+    margin-left: 40px;
+}
+
+label{
+    margin-right: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #757575;
+    font-family: 'Raleway', sans-serif;
+    font-size: 130%;
+    margin-bottom: 15px;
+}
+
+.button{
+    padding: 3px 6px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #CC4331;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.eligibilityButton{
+    margin-left: 15px;
+    display: block;
+}
+
+.button:hover {
+    opacity: 0.8;
+    transition: box-shadow 0s;
+}
+
+.button:active {
+    margin-top: 0.3em;
+    margin-bottom: 0.1em;
+    box-shadow: 0 0.2px 2px rgba(0,0,0,0);
+}
+
+.button:focus {
+  outline: none
+}
+
+#isEligibleImageTraveller, #isEligibleImageDistance, #isEligibleImageTrips, #isEligibleImageCard{
+    position: absolute;
+    right:30px;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.traveller h1, .traveller h2, .distance h1, .distance h2, .trips h1, .trips h2, .communityCard h1, .communityCard h2, .eligibility h1, .eligibility h2{
+    margin: 20px 30px;
+}
+
+.header{
+    height: 10%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000000;
+    position: relative;
+}
+
+.header .title{
+    margin-left: 30px;
+    position: absolute;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.traveller{
+    float: left;
+    position: relative;
+    height: 18%;
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000000;
+}
+
+.checkAge{
+    
+}
+
+.eligibility{
+    float: right;
+    height: 90%;
+    width: 30%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: 2px solid #000000;
+}
+
+#errorMessage{
+    
+    margin-left: 15px;
+    font-weight: normal;
+    color: red;
+}
+
+.eligibilityInfo{
+
+    padding: 0 30px;
+    display: none;
+}
+.dhbLabel{
+    margin-left: 30px;
+    font-weight: bold;
+    display: none;
+}
+
+#selectDHB{
+    margin-top: 10px;
+    margin-left: 30px;
+    display: block;
+    display: none;
+}
+
+.pleaseNote{
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+}
+
+.distance{
+    float: left;
+    position: relative;
+    height: 27%;
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000000;
+}
+
+#travelDistance{
+    border-bottom: none;
+}
+
+.trips{
+    float: left;
+    position: relative;
+    height: 27%;
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000000;
+}
+
+.communityCard{
+    float: left;
+    position: relative;
+    height: 18%;
+    width: 70%;
+}
+
+#radioLabel{
+    float: none;
+}
+
+.eligibilityMobile{
+    display: none;
+}
+
+.contactInfoHeaders{
+    margin: 0 30px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.dhbContactInfo{
+    margin: 5px 30px;
+    padding: 0;
+}
+
+/*----------------Media Queries----------------*/
+
+/*smartphones*/
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    body{
+        margin: 0;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+    h2{
+        font-size: 12px;
+    }
+
+    label{
+        margin-right: 15px;
+        text-align: left;
+        float: left;
+        margin-bottom: 0px;
+        font-size: 13px;
+    } 
+
+    input{
+        display: block;
+        border: none;
+        border-bottom: 1px solid #757575;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        margin-bottom: 5px;
+        width: 100%
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    input::placeholder{
+        color: #999;
+        margin-left: 40px;
+    }
+
+    table{
+        width: 90%;
+    }
+
+    tr{
+        display: inline-block;
+    }
+
+    td{
+        display: inline-block;
+        height: auto;
+        width:100%;
+        padding: 0;
+    }
+
+    #yes , #no{
+        width: auto;
+    }
+
+    #tdWidthAuto{
+        width: auto;
+    }
+
+    .button{
+        padding: 3px 6px;
+        cursor: pointer;
+        font-size: 15px;
+        line-height: 20px;
+        color: #ffffff;
+        background-color: #CC4331;
+        border-radius: 4px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+        outline: none;
+        transition: all 0.2s;
+        margin-bottom: 0;
+        display: block;
+        -webkit-appearance: none;
+    }
+
+    .eligibilityButton{
+        margin: 0 auto;
+        width: auto;
+        padding: 3px 12px;
+        margin-top: 25px;
+        -webkit-appearance: none;
+    }
+
+    .eligibilityButton:active {
+        margin-top: 25px;
+        box-shadow: 0 0.2px 2px rgba(0,0,0,0);
+    }
+
+    #errorMessageMobile{
+        font-weight: normal;
+        color: red;
+        text-align: center;
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+        transition: box-shadow 0s;
+    }
+
+    button:active {
+        margin-top: 0.3em;
+        margin-bottom: 0.1em;
+        box-shadow: 0 0.5px 2px rgba(0,0,0,0.4);
+    }
+
+    .button:focus {
+      outline: none
+    }
+
+
+    #isEligibleImageTraveller, #isEligibleImageDistance, #isEligibleImageTrips, #isEligibleImageCard{
+        position: absolute;
+        right:15px;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .header .title{
+        margin-left: 10px;
+        position: absolute;
+        height: auto;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .traveller h1, .traveller h2, .distance h1, .distance h2, .trips h1, .trips h2, .communityCard h1, .communityCard h2, .eligibilityMobile h1, .eligibilityMobile h2{
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    .traveller{
+        float: none;
+        position: relative;
+        height: 62%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .checkAge{
+        width: 50px;
+    }
+
+    .distance{
+        float: none;
+        position: relative;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .trips{
+        float: none;
+        position: relative;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .communityCard{
+        float: none;
+        position: relative;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    #communityCardLabel{
+        width: 100%;
+        text-align: center;
+    }
+
+    .inner{
+        position: absolute;
+        width: 90%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transition: max-height 0.2s ease-out;
+        transform: translate(-50%, -50%);
+    }
+
+    .eligibility{
+        display: none;
+    }
+
+    .eligibilityMobile{
+        display: block;
+        float: none;
+        height: 7%;
+        width: 100%;
+        border-bottom: none;
+        transition: height 0.2s ease-out;
+    }
+
+    .inner2{
+        position: absolute;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: height 0.2s ease-out;
+    }
+
+    .eligibilityInfo{
+            padding: 0 5%;
+            margin: 8px 0;
+            font-size: 10px;
+            display: none;
+    }
+
+    .dhbLabel{
+        margin: 0;
+        margin-left: 5%;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    #dhbLabelMobile{
+        display: none;
+    }
+
+    #selectDHBMobile{
+        float: right;
+        margin-right: 5%;
+       -webkit-border-radius: 2px;
+       -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+       background-position: 97% center;
+       background-repeat: no-repeat;
+       border: 1px solid #AAA;
+       color: #555;
+       width: 100px;
+       display: none;
+    }
+
+    .dhbContactInfo{
+        margin: 2px 5%;
+        padding: 0;
+        font-size: 11px;
+    }
+
+    .contactInfoHeaders{
+        margin: 0;
+        padding: 0;
+        margin: 0 5%;
+        clear: both;
+        font-size: 12px;
+    }
+
+    .pleaseNote{
+        display: none;
+    }
+
+    #travelDistance{
+        width: 100px;
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+    }
+
+}
+
+/*smartphones iPhone 4 & 5*/
+@media only screen and (min-width: 320px) and (max-width: 360px){
+
+    .traveller h1, .traveller h2, .distance h1, .distance h2, .trips h1, .trips h2, .communityCard h1, .communityCard h2, .eligibilityMobile h1, .eligibilityMobile h2{
+        padding-top: 7px;
+    }
+
+    .eligibilityInfo{
+        padding: 0 5%;
+        margin: 8px 0;
+        font-size: 12px;
+    }
+
+    .dhbContactInfo{
+        margin: 2px 5%;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .dhbLabel{
+        font-size: 13px;
+        margin-bottom: 9px;
+    }
+}
+
+/*smartphones iPhone 6 & 6 Plus*/
+@media only screen and (min-width: 360px) and (max-width: 600px){
+
+    h2{
+        font-size: 15px;
+    }
+
+    .traveller h1, .traveller h2, .distance h1, .distance h2, .trips h1, .trips h2, .communityCard h1, .communityCard h2, .eligibilityMobile h1, .eligibilityMobile h2{
+        padding-top: 10px;
+    }
+
+    .eligibilityInfo{
+        font-size: 14px;
+    }
+
+    .dhbLabel{
+        font-size: 15px;
+    }
+
+    #selectMobile{
+        width: 120px;
+    }
+
+    #addressContiner{
+        float: left;
+        width: 100%;
+    }
+
+    #selectDHBMobile{
+        width: 120px;
+    }
+
+    .dhbContactInfo{
+        margin: 5px 5%;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .contactInfoHeaders{
+        font-size: 14px;
+    }
+
+}
+
+/*tablets*/
+@media only screen and (min-width: 600px) and (max-width: 900px){
+    body{
+        margin: 0;
+    }
+
+    #communityCardLabel{
+        float: none;
+        text-align: center;
+    }
+
+    .eligibilityInfo{
+            font-size: 15px;
+    }
+
+    .dhbContactInfo{
+        font-size: 15px;
+    }
+
+    .contactInfoHeaders{
+        margin: 0;
+        padding: 0;
+        margin: 0 5%;
+        clear: both;
+        font-size: 17px;
+
+    }
+
+    .dhbLabel{
+        font-size: 15px;
+        margin-bottom: 13px;
+
+    }
+
+    td{
+        width: 50%;
+    }
+
+    tr{
+        display: table-row;
+    }
+
+    input{
+        width: 200px;
+    }
+
+
+    #travelDistance{
+        margin-left: 15px;
+    }
+
+    input[type="radio"]{
+        width: auto;
+    }
+
+    .eligibility h2{
+        margin: 20px 15px;
+    }
+
+    .pleaseNote{
+        width: 30%;
+    }
+
+    .eligibilityInfo{
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .dhbContactInfo{
+        font-size: 15px;
+        margin-left: 15px;
+    }
+
+    .contactInfoHeaders{
+        margin: 10px 15px;
+    }
+
+    .dhbLabel{
+        font-size: 15px;
+        margin-bottom: 13px;
+        margin-left: 15px;
+
+    }
+
+    #selectDHB{
+        margin-left: 15px;
+    }
+}
+
+
+/*tablets - landscape*/
+@media only screen and (min-width: 900px) and (max-width: 1200px) and (orientation: landscape){
+
+    .inner{
+        top: 55%;
+    }
+
+    .innerDistance{
+        top: 60%;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .traveller h1, .traveller h2, .distance h1, .distance h2, .trips h1, .trips h2, .communityCard h1, .communityCard h2, .eligibilityMobile h1, .eligibilityMobile h2{
+        margin: 10px 20px;
+    }
+
+    table{
+        width: 90%;
+    }
+}
+
+/*landscape smartphones*/
+@media only screen and (min-width: 300px) and (max-width: 700px) and (orientation : landscape){
+
+    html {
+        height: 140%;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    h1{
+        font-size: 170%;
+    }
+
+    .title h2{
+        display: none;
+    }
+
+    h2{
+        font-size: 70%;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+        line-height: 100%;
+    }
+
+    label{
+        margin-right: 15px;
+        text-align: left;
+        float: left;
+        margin-bottom: 0px;
+        font-size: 13px;
+    } 
+
+    input{
+        display: block;
+        border: none;
+        border-bottom: 1px solid #757575;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        margin-bottom: 5px;
+        width: 100%
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    input::placeholder{
+        color: #999;
+        margin-left: 40px;
+    }
+
+    table{
+        width: 50%;
+    }
+
+    tr{
+        display: inline-block;
+    }
+
+    td{
+        display: inline-block;
+        height: auto;
+        width:100%;
+        padding: 0;
+    }
+
+    #yes , #no{
+        width: auto;
+    }
+
+    #tdWidthAuto{
+        width: auto;
+    }
+
+    .button{
+        padding: 3px 5px;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 20px;
+        color: #ffffff;
+        background-color: #CC4331;
+        border-radius: 4px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+        outline: none;
+        transition: all 0.2s;
+        margin-bottom: 0;
+        display: block;
+    }
+
+    .eligibilityButton{
+        margin: 0 auto;
+        width: auto;
+        padding: 3px 12px;
+        margin-top: 25px;
+        -webkit-appearance: none;
+    }
+
+
+    #errorMessageMobile{
+        font-weight: normal;
+        color: red;
+        text-align: center;
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+        transition: box-shadow 0s;
+    }
+
+    button:active {
+        margin-top: 0.3em;
+        margin-bottom: 0.1em;
+        box-shadow: 0 0.5px 2px rgba(0,0,0,0.4);
+    }
+
+    .button:focus {
+      outline: none
+    }
+
+    #isEligibleImageTraveller, #isEligibleImageDistance, #isEligibleImageTrips, #isEligibleImageCard{
+        position: absolute;
+        right:15px;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .header .title{
+        margin-left: 10px;
+        position: absolute;
+        height: auto;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .traveller h1, .traveller h2, .distance h1, .distance h2, .trips h1, .trips h2, .communityCard h1, .communityCard h2, .eligibilityMobile h1, .eligibilityMobile h2{
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    .traveller{
+        float: none;
+        position: relative;
+        height: 62%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .checkAge{
+        width: 50px;
+    }
+
+    .distance{
+        float: none;
+        position: relative;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .trips{
+        float: none;
+        position: relative;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .communityCard{
+        float: none;
+        position: relative;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    #communityCardLabel{
+        width: 100%;
+        text-align: center;
+    }
+
+    .inner{
+        position: absolute;
+        width: 90%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transition: max-height 0.2s ease-out;
+        transform: translate(-50%, -50%);
+    }
+
+    .eligibility{
+        display: none;
+    }
+
+    .eligibilityMobile{
+        display: block;
+        float: none;
+        height: 7%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid #000000;
+        transition: height 0.2s ease-out;
+    }
+
+    .inner2{
+        position: absolute;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: height 0.2s ease-out;
+    }
+
+    .eligibilityInfo{
+            padding: 0 5%;
+            margin: 8px 0;
+            font-size: 10px;
+    }
+
+    .dhbLabel{
+        margin: 0;
+        margin-left: 5%;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    #selectDHBMobile{
+        float: right;
+        margin-right: 5%;
+       -webkit-border-radius: 2px;
+       -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        -webkit-user-select: none;
+       background-position: 97% center;
+       background-repeat: no-repeat;
+       border: 1px solid #AAA;
+       color: #555;
+       width: 100px;
+    }
+
+    .dhbContactInfo{
+        margin: 2px 10%;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .contactInfoHeaders{
+        margin: 0;
+        padding: 0;
+        margin: 0 10%;
+        clear: both;
+        font-size: 15px;
+    }
+
+    .pleaseNote{
+        display: none;
+    }
+
+    #travelDistance{
+        width: 100px;
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+    }
+
+    #addressMobile{
+        float: left;
+        width: 50%;
+        clear: both;
+    }
+
+    #phoneMobile{
+        float: right;
+        width: 50%;
+    }
+
+    #emailMobile{
+        float: right;
+        width: 50%;
+    }
+}

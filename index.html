@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Health Helpers | National Travel Assistant Eligibility</title>
+        <meta charset = "utf-8">
+		<link rel = "stylesheet" type = "text/css" href="css/styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+        <meta name = "viewport" content = "width=device-width">
+        <script type = "text/javascript" src = "js/script.js"></script>
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQBOLdhX_sflQiOVv82NGyOq5nwxel1jU&callback=initMap">
+    </script>
+	</head>
+	<body id="container" class="body" onload="init()">
+        <div class = "header">
+            <div class="title">
+                <h1>Health Helpers</h1>
+                <h2>National Travel Assistance Eligibility</h2>
+            </div>
+
+        </div>
+
+        <div class = "traveller" id="traveller" onclick="expandDiv(this)">
+            <h2 id="travellerHeader">Traveller</h2>
+            <div class="inner">
+                <table>
+                    <tr>
+                        <td><label>How old is the person that needs to travel?</label></td>
+                        <td><input type="number" min="1" class="checkAge" id="personsAge" placeholder="Age" onfocusout="checkAge()"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <img id="isEligibleImageTraveller"src="fillerImg.png">
+        </div>
+
+        <div class = "eligibility">
+            <h2>Eligibility Assessment</h2>
+            <input type="button" class="button eligibilityButton" id="desktopBtn" value="Check Eligibility" onclick="checkEligibility();"/>
+            <h4 id="errorMessage" style="display:none">Please fill out each step to continue</h4>
+            <p class="eligibilityInfo" id="eligibilityInfo">It looks like you may be eligible for National Travel Assistance<br/><br/>
+            The next step is to contact the National Travel Co-ordinator for the DHB where you live.</p>
+
+            <label class="dhbLabel" id="dhbLabel">Select your home DHB</label>
+            <select id="selectDHB" onclick="populateDHBList(this)" onchange="displayDHBAddress(value)">
+                <option default>DHB List</option>
+            </select>
+
+            <div id="address">
+            </div>
+
+            <div id="phone">
+            </div>
+
+            <div id="email">
+            </div>
+
+            <div class="pleaseNote">
+                <h4 class="eligibilityInfo">Please Note:</h4>
+                <p class="eligibilityInfo">If you recieve or are eligible for travel assistance from another
+                     provider, such as ACC, Work and Income, the Ministry of Social
+                     Development, the Ministry of Transport or the Ministry of
+                      Education, you may not be eligible for assistance under
+                      the National Travel Assistance Scheme.</p>
+            </div>
+
+        </div>
+
+        <div class = "distance" id="distance" onclick="expandDiv(this)">
+            <h2 id="distanceHeader">Distance</h2>
+                <div class="inner innerDistance">
+                    <table>
+                        <tr>
+                            <td><label>Where will you travel from?</label></td>
+                            <td><input type="text" id="address1" placeholder="From" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Where will you travel to?</label></td>
+                            <td><input type="text" id="address2" placeholder="To"/><br/></td>
+                        </tr>
+                        <tr>
+                            <td id="tdWidthAuto"><input type="button" class="button" value="Google Distance" onclick="showDistance();"/></td>
+                            <td id="tdWidthAuto"><input type="text" id="travelDistance" readonly></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <img id="isEligibleImageDistance"src="fillerImg.png">
+        </div>
+
+        <div class = "trips" id="trips" onclick="expandDiv(this)">
+            <h2 id="tripsHeader">Number of trips</h2>
+            <div class="inner">
+                <table>
+                    <tr>
+                        <td><label>How many trips will you need to take</label></td>
+                        <td><input id="noTrips" type="number" min="1" class="checkNoTrips" placeholder="Trip #"></td>
+                    </tr>
+                    <tr>
+                        <td><label>And over what period will these trips happen?</label></td>
+                        <td><input id="period" type="number" min="1" class="checkPeriod" placeholder="Period (months)" onfocusout="checkNumberOfTrips()"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <img id="isEligibleImageTrips"src="fillerImg.png">
+        </div>
+
+        <div class="communityCard" onclick="expandDiv(this)">
+            <h2 id="cardHeader">Community Services Card</h2>
+            <div class="inner">
+                <label id="communityCardLabel">Do you have a Community Services Card??</label><br/>
+                <input type="radio" id="yes" value="yes" name="yes_no" onclick="communityCardCheck(value)"/>
+                <label id="radioLabel" for="yes">Yes</label>
+                <input type="radio" id="no" value="no" name="yes_no" onclick="communityCardCheck(value)"/>
+                <label id="radioLabel" for="no">No</label>
+            </div>
+            <img id="isEligibleImageCard"src="fillerImg.png">
+        </div>
+
+        <div class = "eligibilityMobile" onclick="expandDiv(this)">
+            <h2 id="assesmentHeader">Eligibility Assessment</h2>
+
+            <div class="inner2">
+                <input type="button" class="button eligibilityButton" id="mobileBtn" value="Check Eligibility" onclick="checkEligibility();"/>
+                <h4 id="errorMessageMobile" style="display:none">Please fill out each step to continue</h4>
+                <p class="eligibilityInfo" id="eligibilityInfoMobile">It looks like you may be eligible for National Travel Assistance. The next step is to contact the National Travel Co-ordinator for the DHB where you live.</p>
+
+                <label class="dhbLabel" id="dhbLabelMobile">Select your home DHB</label>
+                <select id="selectDHBMobile" onchange="displayDHBAddress(value)">
+                    <option default>DHB List</option>
+                </select>
+                <div id="addressContainer">
+                    <div id="addressMobile">
+                    </div>
+
+                    <div id="phoneMobile">
+                    </div>
+
+                    <div id="emailMobile">
+                    </div>
+                </div>
+                
+                <div class="pleaseNote">
+                    <h4 class="eligibilityInfo">Please Note:</h4>
+                    <p class="eligibilityInfo">If you recieve or are eligible for travel assistance from another
+                         provider, such as ACC, Work and Income, the Ministry of Social
+                         Development, the Ministry of Transport or the Ministry of
+                          Education, you may not be eligible for assistance under
+                          the National Travel Assistance Scheme.</p>
+                </div>
+            </div>
+
+        </div>
+
+	</body>
+</html>
